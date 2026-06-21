@@ -1,3 +1,5 @@
+export const maxDuration = 60;
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -18,7 +20,7 @@ export default async function handler(req, res) {
         'anthropic-version': '2023-06-01',
       },
       body: JSON.stringify({
-        model: 'claude-opus-4-6',
+        model: 'claude-haiku-4-5-20251001',
         max_tokens: 4000,
         system: '你是专业英语词汇分析助手。只返回纯JSON数组，无任何Markdown或反引号。格式：[{"word":"英文","category":"idiom|proper|highfreq|culture","zh":"中文解释","example":"书中原句"}]',
         messages: [{
