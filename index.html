@@ -9,14 +9,10 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Nunito','Segoe UI',sans-serif;background:#F7F3EC;color:#1A2340;min-height:100vh;display:flex;flex-direction:column}
 :root{--yellow:#FFD84D;--coral:#FF6B6B;--teal:#3DD9C2;--navy:#1A2340;--purple:#8B5CF6;--muted:#8892A4;--border:#E8E2D9}
-
-/* HEADER */
 header{background:var(--navy);padding:12px 24px;display:flex;align-items:center;gap:12px;flex-shrink:0}
 .logo{font-family:'Fredoka One',cursive;font-size:1.3rem;color:var(--yellow)}
 .sub{font-size:0.72rem;color:var(--teal)}
 #word-badge{margin-left:auto;background:var(--yellow);color:var(--navy);font-weight:800;font-size:0.75rem;padding:3px 12px;border-radius:50px;display:none}
-
-/* LAYOUT */
 .app{display:flex;flex:1;min-height:0}
 nav{width:186px;background:var(--navy);padding:16px 10px;display:flex;flex-direction:column;gap:4px;flex-shrink:0}
 .nav-btn{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:8px;border:none;background:transparent;color:#AABAC8;font-size:0.85rem;font-weight:700;cursor:pointer;width:100%;text-align:left;transition:all .15s;font-family:inherit}
@@ -24,17 +20,6 @@ nav{width:186px;background:var(--navy);padding:16px 10px;display:flex;flex-direc
 .nav-btn.active{background:var(--yellow);color:var(--navy)}
 main{flex:1;padding:28px;overflow-y:auto}
 .view{display:none}.view.active{display:block}
-
-/* API KEY BANNER */
-
-
-
-
-
-
-
-
-/* UPLOAD */
 .upload-box{max-width:580px;margin:0 auto}
 .drop-zone{border:3px dashed var(--border);border-radius:18px;padding:52px 36px;text-align:center;cursor:pointer;background:white;transition:all .2s}
 .drop-zone:hover,.drop-zone.ready{border-color:var(--teal);background:#F0FBF9}
@@ -52,11 +37,14 @@ main{flex:1;padding:28px;overflow-y:auto}
 .prog-bar-wrap{background:var(--border);border-radius:50px;height:8px;margin:14px 0 6px;overflow:hidden}
 .prog-bar{height:100%;border-radius:50px;background:linear-gradient(90deg,var(--teal),var(--purple));width:0%;transition:width .4s}
 .err-box{background:#FEE2E2;color:var(--coral);border-radius:10px;padding:12px 16px;margin-top:14px;font-weight:700;font-size:0.88rem;display:none}
-
-/* LIBRARY */
 .lib-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
 .lib-header h2{font-size:1.2rem;font-weight:800}
 .count-badge{background:var(--yellow);color:var(--navy);font-weight:800;font-size:0.72rem;padding:3px 10px;border-radius:50px}
+.share-btn{margin-left:auto;padding:8px 18px;border-radius:50px;border:none;background:var(--teal);color:var(--navy);font-weight:800;font-size:0.82rem;cursor:pointer;font-family:inherit}
+.share-btn:hover{background:#2ec9b0}
+.share-box{background:#F0FBF9;border:2px solid var(--teal);border-radius:12px;padding:14px 16px;margin-bottom:16px;display:none;align-items:center;gap:10px;flex-wrap:wrap}
+.share-box input{flex:1;min-width:200px;padding:8px 12px;border-radius:8px;border:2px solid var(--border);font-family:inherit;font-size:0.85rem;outline:none}
+.copy-btn{padding:8px 16px;border-radius:8px;border:none;background:var(--navy);color:var(--yellow);font-weight:800;font-size:0.82rem;cursor:pointer;font-family:inherit;white-space:nowrap}
 .stats-row{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
 .stat-chip{background:white;border:2px solid var(--border);border-radius:8px;padding:6px 12px;font-size:0.78rem;font-weight:700}
 .cat-tabs{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
@@ -73,8 +61,6 @@ main{flex:1;padding:28px;overflow-y:auto}
 .word-card.exp .card-ex{display:block}
 .star-btn{position:absolute;top:10px;right:12px;background:none;border:none;font-size:1rem;cursor:pointer;opacity:.25;transition:opacity .15s}
 .star-btn.on{opacity:1}
-
-/* FLASHCARD */
 .practice-wrap{max-width:520px;margin:0 auto}
 .prac-header{display:flex;align-items:center;gap:10px;margin-bottom:18px}
 .prac-header h2{font-size:1.2rem;font-weight:800}
@@ -96,8 +82,6 @@ main{flex:1;padding:28px;overflow-y:auto}
 .fc-act.again{background:#FEE2E2;color:var(--coral)}
 .fc-act.good{background:#D1FAE5;color:#059669}
 .fc-act.easy{background:#DBEAFE;color:#2563EB}
-
-/* FILL BLANK */
 .fib-card{background:white;border-radius:18px;padding:24px;border:2px solid var(--border);margin-bottom:14px;box-shadow:0 4px 16px rgba(0,0,0,.04)}
 .fib-cat-tag{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:50px;font-size:0.67rem;font-weight:700;margin-bottom:12px}
 .fib-sentence{font-size:1rem;line-height:1.9;margin-bottom:8px}
@@ -115,14 +99,13 @@ main{flex:1;padding:28px;overflow-y:auto}
 .feedback{padding:12px 16px;border-radius:10px;font-weight:700;font-size:0.85rem;margin-top:12px;display:none}
 .feedback.cor{background:#D1FAE5;color:#059669;display:block}
 .feedback.wro{background:#FEE2E2;color:var(--coral);display:block}
-
-/* EMPTY */
 .empty{text-align:center;padding:60px 20px;color:var(--muted)}
 .empty .big{font-size:2.8rem;margin-bottom:10px}
+.toast{position:fixed;bottom:24px;right:24px;background:var(--navy);color:white;padding:12px 20px;border-radius:12px;font-weight:600;font-size:0.9rem;opacity:0;transition:opacity .3s;pointer-events:none;z-index:100}
+.toast.show{opacity:1}
 </style>
 </head>
 <body>
-
 <header>
   <span style="font-size:1.5rem">📚</span>
   <div>
@@ -131,7 +114,6 @@ main{flex:1;padding:28px;overflow-y:auto}
   </div>
   <span id="word-badge">📦 0 个词</span>
 </header>
-
 <div class="app">
   <nav>
     <button class="nav-btn active" data-v="upload">📤 上传书本</button>
@@ -139,10 +121,7 @@ main{flex:1;padding:28px;overflow-y:auto}
     <button class="nav-btn" data-v="flashcard">🃏 闪卡</button>
     <button class="nav-btn" data-v="fillblank">✏️ 填空题</button>
   </nav>
-
   <main>
-
-    <!-- UPLOAD -->
     <div id="v-upload" class="view active">
       <div class="upload-box">
         <div class="drop-zone" id="drop-zone" onclick="document.getElementById('file-in').click()">
@@ -166,12 +145,15 @@ main{flex:1;padding:28px;overflow-y:auto}
         <div class="err-box" id="err-box"></div>
       </div>
     </div>
-
-    <!-- LIBRARY -->
     <div id="v-library" class="view">
       <div class="lib-header">
         <h2>📖 词汇库</h2>
         <span class="count-badge" id="lib-count">0 个词</span>
+        <button class="share-btn" onclick="shareWords()">🔗 生成分享链接</button>
+      </div>
+      <div class="share-box" id="share-box">
+        <input id="share-url" readonly>
+        <button class="copy-btn" onclick="copyUrl()">复制链接</button>
       </div>
       <div class="stats-row" id="stats-row"></div>
       <div class="cat-tabs" id="cat-tabs"></div>
@@ -179,8 +161,6 @@ main{flex:1;padding:28px;overflow-y:auto}
         <div class="empty"><div class="big">📭</div><p>先上传一本书提取词汇</p></div>
       </div>
     </div>
-
-    <!-- FLASHCARD -->
     <div id="v-flashcard" class="view">
       <div class="practice-wrap">
         <div class="prac-header">
@@ -206,8 +186,6 @@ main{flex:1;padding:28px;overflow-y:auto}
         </div>
       </div>
     </div>
-
-    <!-- FILL BLANK -->
     <div id="v-fillblank" class="view">
       <div class="practice-wrap">
         <div class="prac-header">
@@ -231,253 +209,176 @@ main{flex:1;padding:28px;overflow-y:auto}
     </div>
   </main>
 </div>
-
+<div class="toast" id="toast"></div>
 <script>
-const catCfg = {
-  idiom:    {label:'习语/俚语', emoji:'🗣️', color:'#FF6B6B', bg:'#FFF0F0'},
-  proper:   {label:'专有名词',  emoji:'🏷️', color:'#8B5CF6', bg:'#F5F0FF'},
-  highfreq: {label:'高频词汇',  emoji:'🔥', color:'#0D9488', bg:'#F0FDFA'},
-  culture:  {label:'文化背景',  emoji:'🌍', color:'#D97706', bg:'#FFFBEB'},
-};
+const catCfg={idiom:{label:'习语/俚语',emoji:'🗣️',color:'#FF6B6B',bg:'#FFF0F0'},proper:{label:'专有名词',emoji:'🏷️',color:'#8B5CF6',bg:'#F5F0FF'},highfreq:{label:'高频词汇',emoji:'🔥',color:'#0D9488',bg:'#F0FDFA'},culture:{label:'文化背景',emoji:'🌍',color:'#D97706',bg:'#FFFBEB'}};
+let wordBank=[],fileBase64=null,fileReady=false;
+let fcQueue=[],fcIdx=0,fcFlipped=false;
+let fibQueue=[],fibIdx=0,fibSelected=null,fibChecked=false;
+const chipState={idiom:true,proper:true,highfreq:true,culture:true};
 
-let wordBank = [], fileBase64 = null, fileReady = false;
-let fcQueue = [], fcIdx = 0, fcFlipped = false;
-let fibQueue = [], fibIdx = 0, fibSelected = null, fibChecked = false;
-const chipState = {idiom:true, proper:true, highfreq:true, culture:true};
+// 检查是否是分享链接
+const urlParams=new URLSearchParams(window.location.search);
+const shareId=urlParams.get('id');
+if(shareId) loadShared(shareId);
 
-// ── NAV ──
-document.querySelectorAll('.nav-btn').forEach(btn => {
-  btn.onclick = () => switchView(btn.dataset.v);
-});
-function switchView(v) {
-  document.querySelectorAll('.view').forEach(el => el.classList.remove('active'));
-  document.getElementById('v-' + v).classList.add('active');
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.toggle('active', b.dataset.v === v));
-  if (v === 'library') renderLibrary();
-  if (v === 'flashcard') initFC();
-  if (v === 'fillblank') initFib();
-}
-
-// ── CHIPS ──
-document.querySelectorAll('.chip').forEach(c => {
-  c.onclick = () => {
-    chipState[c.dataset.k] = !chipState[c.dataset.k];
-    c.classList.toggle('on', chipState[c.dataset.k]);
-  };
-});
-
-// ── FILE ──
-function handleFile(inp) {
-  const f = inp.files[0]; if (!f) return;
-  const r = new FileReader();
-  r.readAsDataURL(f);
-  r.onload = () => {
-    fileBase64 = r.result.split(',')[1];
-    fileReady = true;
-    document.getElementById('dz-title').textContent = '✅ ' + f.name;
-    document.getElementById('dz-sub').textContent = (f.size/1024).toFixed(1) + ' KB · 准备好了！';
-    document.getElementById('drop-zone').classList.add('ready');
-    updateExtractBtn();
-  };
-}
-
-function updateExtractBtn() {
-  const btn = document.getElementById('extract-btn');
-  btn.className = fileReady ? 'big-btn go' : 'big-btn off';
-}
-
-// ── EXTRACT ──
-async function startExtract() {
-  if (!fileReady) return;
-  const btn = document.getElementById('extract-btn');
-  btn.className = 'big-btn off'; btn.textContent = '⏳ 正在分析...';
-  const pb = document.getElementById('prog-box'); pb.style.display = 'block';
-  document.getElementById('err-box').style.display = 'none';
-
-  const cats = Object.entries(chipState).filter(([,v])=>v).map(([k]) => ({
-    idiom:'习语和俚语', proper:'专有名词（人名、地名等）',
-    highfreq:'儿童英语高频词汇', culture:'美国文化背景词汇'
-  }[k]));
-
-  setP(15, '正在发送给 AI...', '');
-  try {
-    setP(35, 'AI 正在阅读书本...', '这可能需要 30–60 秒');
-    const resp = await fetch('/api/chat', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        pdfBase64: fileBase64,
-        categories: cats
-      })
-    });
-
-    setP(75, '正在解析结果...', '');
-    const data = await resp.json();
-    if (data.error) throw new Error(data.error.message);
-    const tb = data.content?.find(b => b.type === 'text');
-    if (!tb) throw new Error('无文本响应');
-    let raw = tb.text.trim().replace(/^```json\s*/i,'').replace(/^```\s*/i,'').replace(/```\s*$/i,'').trim();
-    wordBank = JSON.parse(raw).map((w,i) => ({...w, id:i, starred:false}));
-    setP(100, `✅ 找到 ${wordBank.length} 个词汇！`, '');
-    updateBadge();
-    setTimeout(() => {
-      pb.style.display = 'none';
-      btn.className = 'big-btn go'; btn.textContent = '🚀 开始提取词汇';
+async function loadShared(id){
+  try{
+    const r=await fetch('/api/load?id='+id);
+    const data=await r.json();
+    if(data.words){
+      wordBank=data.words;
+      updateBadge();
       switchView('library');
-    }, 900);
-  } catch(e) {
-    const eb = document.getElementById('err-box');
-    eb.textContent = '❌ ' + e.message; eb.style.display = 'block';
-    pb.style.display = 'none';
-    btn.className = 'big-btn go'; btn.textContent = '🚀 开始提取词汇';
+    }
+  }catch(e){console.error(e);}
+}
+
+document.querySelectorAll('.nav-btn').forEach(btn=>{btn.onclick=()=>switchView(btn.dataset.v);});
+function switchView(v){
+  document.querySelectorAll('.view').forEach(el=>el.classList.remove('active'));
+  document.getElementById('v-'+v).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.v===v));
+  if(v==='library')renderLibrary();
+  if(v==='flashcard')initFC();
+  if(v==='fillblank')initFib();
+}
+
+document.querySelectorAll('.chip').forEach(c=>{c.onclick=()=>{chipState[c.dataset.k]=!chipState[c.dataset.k];c.classList.toggle('on',chipState[c.dataset.k]);};});
+
+function handleFile(inp){
+  const f=inp.files[0];if(!f)return;
+  const r=new FileReader();r.readAsDataURL(f);
+  r.onload=()=>{fileBase64=r.result.split(',')[1];fileReady=true;document.getElementById('dz-title').textContent='✅ '+f.name;document.getElementById('dz-sub').textContent=(f.size/1024).toFixed(1)+' KB · 准备好了！';document.getElementById('drop-zone').classList.add('ready');updateExtractBtn();};
+}
+function updateExtractBtn(){document.getElementById('extract-btn').className=fileReady?'big-btn go':'big-btn off';}
+
+async function startExtract(){
+  if(!fileReady)return;
+  const btn=document.getElementById('extract-btn');
+  btn.className='big-btn off';btn.textContent='⏳ 正在分析...';
+  const pb=document.getElementById('prog-box');pb.style.display='block';
+  document.getElementById('err-box').style.display='none';
+  const cats=Object.entries(chipState).filter(([,v])=>v).map(([k])=>({idiom:'习语和俚语',proper:'专有名词（人名、地名等）',highfreq:'儿童英语高频词汇',culture:'美国文化背景词汇'}[k]));
+  setP(15,'正在发送给 AI...','');
+  try{
+    setP(35,'AI 正在阅读书本...','这可能需要 30–60 秒');
+    const resp=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({pdfBase64:fileBase64,categories:cats})});
+    setP(75,'正在解析结果...','');
+    const data=await resp.json();
+    if(data.error)throw new Error(data.error.message||data.error);
+    const tb=data.content?.find(b=>b.type==='text');
+    if(!tb)throw new Error('无文本响应');
+    let raw=tb.text.trim().replace(/^```json\s*/i,'').replace(/^```\s*/i,'').replace(/```\s*$/i,'').trim();
+    wordBank=JSON.parse(raw).map((w,i)=>({...w,id:i,starred:false}));
+    setP(100,`✅ 找到 ${wordBank.length} 个词汇！`,'');
+    updateBadge();
+    setTimeout(()=>{pb.style.display='none';btn.className='big-btn go';btn.textContent='🚀 开始提取词汇';switchView('library');},900);
+  }catch(e){
+    const eb=document.getElementById('err-box');eb.textContent='❌ '+e.message;eb.style.display='block';
+    pb.style.display='none';btn.className='big-btn go';btn.textContent='🚀 开始提取词汇';
   }
 }
 
-function setP(pct, msg, sub) {
-  document.getElementById('prog-bar').style.width = pct + '%';
-  document.getElementById('prog-msg').textContent = msg;
-  document.getElementById('prog-sub').textContent = sub;
-}
-function updateBadge() {
-  const b = document.getElementById('word-badge');
-  b.textContent = `📦 ${wordBank.length} 个词`;
-  b.style.display = wordBank.length ? 'inline' : 'none';
+function setP(pct,msg,sub){document.getElementById('prog-bar').style.width=pct+'%';document.getElementById('prog-msg').textContent=msg;document.getElementById('prog-sub').textContent=sub;}
+function updateBadge(){const b=document.getElementById('word-badge');b.textContent=`📦 ${wordBank.length} 个词`;b.style.display=wordBank.length?'inline':'none';}
+
+async function shareWords(){
+  if(!wordBank.length){showToast('先提取词汇再分享！');return;}
+  try{
+    const r=await fetch('/api/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({words:wordBank,title:'My Weird School'})});
+    const data=await r.json();
+    if(!data.id)throw new Error('保存失败');
+    const url=window.location.origin+'?id='+data.id;
+    document.getElementById('share-url').value=url;
+    document.getElementById('share-box').style.display='flex';
+    showToast('🔗 链接已生成！');
+  }catch(e){showToast('生成失败：'+e.message);}
 }
 
-// ── LIBRARY ──
-let libFilter = 'all';
-function renderLibrary() {
-  document.getElementById('lib-count').textContent = wordBank.length + ' 个词';
-  document.getElementById('stats-row').innerHTML = Object.entries(catCfg).map(([k,c]) =>
-    `<div class="stat-chip">${c.emoji} ${c.label} <strong>${wordBank.filter(w=>w.category===k).length}</strong></div>`
-  ).join('');
-  const tabs = [['all','全部','#1A2340'], ...Object.entries(catCfg).map(([k,c]) => [k, c.emoji+' '+c.label, c.color])];
-  document.getElementById('cat-tabs').innerHTML = tabs.map(([k,l,col]) =>
-    `<button class="cat-tab" onclick="filterLib('${k}')" style="${libFilter===k?`background:${col};color:${k==='highfreq'?'#1A2340':'white'};border-color:${col};`:''}"> ${l}</button>`
-  ).join('');
-  const filtered = libFilter === 'all' ? wordBank : wordBank.filter(w => w.category === libFilter);
-  if (!filtered.length) {
-    document.getElementById('words-grid').innerHTML = '<div class="empty"><div class="big">📭</div><p>先上传一本书</p></div>';
-    return;
-  }
-  document.getElementById('words-grid').innerHTML = filtered.map(w => {
-    const c = catCfg[w.category] || catCfg.highfreq;
-    return `<div class="word-card${w._exp?' exp':''}" id="wc${w.id}" onclick="toggleCard(${w.id})">
-      <button class="star-btn${w.starred?' on':''}" onclick="starWord(event,${w.id})">⭐</button>
-      <div class="card-cat"><span class="cat-dot" style="background:${c.color}"></span>${c.emoji} ${c.label}</div>
-      <div class="card-word">${w.word}</div>
-      <div class="card-zh">${w.zh}</div>
-      <div class="card-ex">${w.example||''}</div>
-    </div>`;
-  }).join('');
-}
-function filterLib(k) { libFilter = k; renderLibrary(); }
-function toggleCard(id) {
-  const w = wordBank.find(x => x.id === id); w._exp = !w._exp;
-  document.getElementById('wc'+id).classList.toggle('exp', w._exp);
-}
-function starWord(e, id) {
-  e.stopPropagation();
-  const w = wordBank.find(x => x.id === id); w.starred = !w.starred;
-  document.querySelector(`#wc${id} .star-btn`).classList.toggle('on', w.starred);
+function copyUrl(){
+  const input=document.getElementById('share-url');
+  input.select();document.execCommand('copy');
+  showToast('✅ 链接已复制！');
 }
 
-// ── FLASHCARD ──
-function initFC() {
-  if (!wordBank.length) { document.getElementById('fc-empty').style.display='block'; document.getElementById('fc-wrap').style.display='none'; return; }
-  fcQueue = shuffle([...wordBank]); fcIdx = 0; fcFlipped = false;
-  document.getElementById('fc-empty').style.display = 'none';
-  document.getElementById('fc-wrap').style.display = 'block';
-  loadFC();
-}
-function loadFC() {
-  if (fcIdx >= fcQueue.length) { fcQueue = shuffle([...wordBank]); fcIdx = 0; }
-  const w = fcQueue[fcIdx]; const c = catCfg[w.category] || catCfg.highfreq;
-  document.getElementById('fc-card').classList.remove('flipped'); fcFlipped = false;
-  document.getElementById('fc-hint').textContent = '点击翻转';
-  document.getElementById('fc-cat-tag').textContent = c.emoji + ' ' + c.label;
-  document.getElementById('fc-cat-tag').style.cssText = `background:${c.bg};color:${c.color}`;
-  document.getElementById('fc-word').textContent = w.word;
-  document.getElementById('fc-word').style.color = '#1A2340';
-  document.getElementById('fc-prompt').style.display = 'block';
-  document.getElementById('fc-zh').style.display = 'none';
-  document.getElementById('fc-ex').style.display = 'none';
-  document.getElementById('fc-prog').textContent = `${fcIdx+1} / ${fcQueue.length}`;
-  document.getElementById('fc-bar').style.width = `${((fcIdx+1)/fcQueue.length)*100}%`;
-}
-function flipCard() {
-  fcFlipped = !fcFlipped;
-  document.getElementById('fc-card').classList.toggle('flipped', fcFlipped);
-  const w = fcQueue[fcIdx];
-  if (fcFlipped) {
-    document.getElementById('fc-hint').textContent = '释义';
-    document.getElementById('fc-word').style.color = '#FFD84D';
-    document.getElementById('fc-prompt').style.display = 'none';
-    document.getElementById('fc-zh').textContent = w.zh; document.getElementById('fc-zh').style.display = 'block';
-    if (w.example) { document.getElementById('fc-ex').textContent = '"' + w.example + '"'; document.getElementById('fc-ex').style.display = 'block'; }
-  } else { loadFC(); }
-}
-function rateCard(r) {
-  if (!fcFlipped) { flipCard(); return; }
-  if (r === 'again') fcQueue.push(fcQueue[fcIdx]);
-  fcIdx++; loadFC();
-}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200);}
 
-// ── FILL BLANK ──
-function initFib() {
-  if (!wordBank.length) { document.getElementById('fib-empty').style.display='block'; document.getElementById('fib-wrap').style.display='none'; return; }
-  fibQueue = shuffle([...wordBank]); fibIdx = 0;
-  document.getElementById('fib-empty').style.display = 'none';
-  document.getElementById('fib-wrap').style.display = 'block';
-  loadFib();
+let libFilter='all';
+function renderLibrary(){
+  document.getElementById('lib-count').textContent=wordBank.length+' 个词';
+  document.getElementById('stats-row').innerHTML=Object.entries(catCfg).map(([k,c])=>`<div class="stat-chip">${c.emoji} ${c.label} <strong>${wordBank.filter(w=>w.category===k).length}</strong></div>`).join('');
+  const tabs=[['all','全部','#1A2340'],...Object.entries(catCfg).map(([k,c])=>[k,c.emoji+' '+c.label,c.color])];
+  document.getElementById('cat-tabs').innerHTML=tabs.map(([k,l,col])=>`<button class="cat-tab" onclick="filterLib('${k}')" style="${libFilter===k?`background:${col};color:${k==='highfreq'?'#1A2340':'white'};border-color:${col};`:''}">${l}</button>`).join('');
+  const filtered=libFilter==='all'?wordBank:wordBank.filter(w=>w.category===libFilter);
+  if(!filtered.length){document.getElementById('words-grid').innerHTML='<div class="empty"><div class="big">📭</div><p>先上传一本书</p></div>';return;}
+  document.getElementById('words-grid').innerHTML=filtered.map(w=>{const c=catCfg[w.category]||catCfg.highfreq;return`<div class="word-card${w._exp?' exp':''}" id="wc${w.id}" onclick="toggleCard(${w.id})"><button class="star-btn${w.starred?' on':''}" onclick="starWord(event,${w.id})">⭐</button><div class="card-cat"><span class="cat-dot" style="background:${c.color}"></span>${c.emoji} ${c.label}</div><div class="card-word">${w.word}</div><div class="card-zh">${w.zh}</div><div class="card-ex">${w.example||''}</div></div>`;}).join('');
 }
-function loadFib() {
-  if (fibIdx >= fibQueue.length) { fibQueue = shuffle([...wordBank]); fibIdx = 0; }
-  fibSelected = null; fibChecked = false;
-  const w = fibQueue[fibIdx]; const c = catCfg[w.category] || catCfg.highfreq;
-  document.getElementById('fib-fb').className = 'feedback';
-  document.getElementById('next-btn').style.display = 'none';
-  document.getElementById('check-btn').style.display = 'block';
-  document.getElementById('check-btn').className = 'check-btn';
-  document.getElementById('fib-cat-tag').textContent = c.emoji + ' ' + c.label;
-  document.getElementById('fib-cat-tag').style.cssText = `background:${c.bg};color:${c.color}`;
-  const sentence = (w.example || `She said it was a "${w.word}" moment.`)
-    .replace(new RegExp(w.word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi'), '______');
-  document.getElementById('fib-sentence').textContent = sentence;
-  document.getElementById('fib-hint').textContent = '💡 ' + w.zh;
-  const wrong = shuffle(wordBank.filter(x => x.id !== w.id)).slice(0,3);
-  const opts = shuffle([w, ...wrong]);
-  document.getElementById('fib-opts').innerHTML = opts.map(o =>
-    `<button class="fib-opt" data-id="${o.id}" onclick="selectFib(this,${w.id})">${o.word}</button>`
-  ).join('');
-  document.getElementById('fib-prog').textContent = `${fibIdx+1} / ${fibQueue.length}`;
-  document.getElementById('fib-bar').style.width = `${((fibIdx+1)/fibQueue.length)*100}%`;
-}
-function selectFib(btn, correctId) {
-  if (fibChecked) return;
-  document.querySelectorAll('.fib-opt').forEach(b => b.classList.remove('sel'));
-  btn.classList.add('sel');
-  fibSelected = parseInt(btn.dataset.id);
-  document.getElementById('check-btn').className = 'check-btn ready';
-}
-function checkFib() {
-  if (fibSelected === null) return;
-  fibChecked = true;
-  const w = fibQueue[fibIdx];
-  const correct = fibSelected === w.id;
-  document.querySelectorAll('.fib-opt').forEach(b => {
-    if (parseInt(b.dataset.id) === w.id) b.classList.add('cor');
-    else if (parseInt(b.dataset.id) === fibSelected) b.classList.add('wro');
-  });
-  const fb = document.getElementById('fib-fb');
-  fb.textContent = correct ? `✅ 正确！${w.word} = ${w.zh}` : `❌ 正确答案是：${w.word}（${w.zh}）`;
-  fb.className = 'feedback ' + (correct ? 'cor' : 'wro');
-  document.getElementById('check-btn').style.display = 'none';
-  document.getElementById('next-btn').style.display = 'block';
-}
-function nextFib() { fibIdx++; loadFib(); }
+function filterLib(k){libFilter=k;renderLibrary();}
+function toggleCard(id){const w=wordBank.find(x=>x.id===id);w._exp=!w._exp;document.getElementById('wc'+id).classList.toggle('exp',w._exp);}
+function starWord(e,id){e.stopPropagation();const w=wordBank.find(x=>x.id===id);w.starred=!w.starred;document.querySelector(`#wc${id} .star-btn`).classList.toggle('on',w.starred);}
 
-function shuffle(a) { return a.sort(() => Math.random() - 0.5); }
+function initFC(){
+  if(!wordBank.length){document.getElementById('fc-empty').style.display='block';document.getElementById('fc-wrap').style.display='none';return;}
+  fcQueue=shuffle([...wordBank]);fcIdx=0;fcFlipped=false;
+  document.getElementById('fc-empty').style.display='none';document.getElementById('fc-wrap').style.display='block';loadFC();
+}
+function loadFC(){
+  if(fcIdx>=fcQueue.length){fcQueue=shuffle([...wordBank]);fcIdx=0;}
+  const w=fcQueue[fcIdx];const c=catCfg[w.category]||catCfg.highfreq;
+  document.getElementById('fc-card').classList.remove('flipped');fcFlipped=false;
+  document.getElementById('fc-hint').textContent='点击翻转';
+  document.getElementById('fc-cat-tag').textContent=c.emoji+' '+c.label;
+  document.getElementById('fc-cat-tag').style.cssText=`background:${c.bg};color:${c.color}`;
+  document.getElementById('fc-word').textContent=w.word;
+  document.getElementById('fc-word').style.color='#1A2340';
+  document.getElementById('fc-prompt').style.display='block';
+  document.getElementById('fc-zh').style.display='none';
+  document.getElementById('fc-ex').style.display='none';
+  document.getElementById('fc-prog').textContent=`${fcIdx+1} / ${fcQueue.length}`;
+  document.getElementById('fc-bar').style.width=`${((fcIdx+1)/fcQueue.length)*100}%`;
+}
+function flipCard(){
+  fcFlipped=!fcFlipped;document.getElementById('fc-card').classList.toggle('flipped',fcFlipped);
+  const w=fcQueue[fcIdx];
+  if(fcFlipped){document.getElementById('fc-hint').textContent='释义';document.getElementById('fc-word').style.color='#FFD84D';document.getElementById('fc-prompt').style.display='none';document.getElementById('fc-zh').textContent=w.zh;document.getElementById('fc-zh').style.display='block';if(w.example){document.getElementById('fc-ex').textContent='"'+w.example+'"';document.getElementById('fc-ex').style.display='block';}}else{loadFC();}
+}
+function rateCard(r){if(!fcFlipped){flipCard();return;}if(r==='again')fcQueue.push(fcQueue[fcIdx]);fcIdx++;loadFC();}
+
+function initFib(){
+  if(!wordBank.length){document.getElementById('fib-empty').style.display='block';document.getElementById('fib-wrap').style.display='none';return;}
+  fibQueue=shuffle([...wordBank]);fibIdx=0;
+  document.getElementById('fib-empty').style.display='none';document.getElementById('fib-wrap').style.display='block';loadFib();
+}
+function loadFib(){
+  if(fibIdx>=fibQueue.length){fibQueue=shuffle([...wordBank]);fibIdx=0;}
+  fibSelected=null;fibChecked=false;
+  const w=fibQueue[fibIdx];const c=catCfg[w.category]||catCfg.highfreq;
+  document.getElementById('fib-fb').className='feedback';
+  document.getElementById('next-btn').style.display='none';
+  document.getElementById('check-btn').style.display='block';
+  document.getElementById('check-btn').className='check-btn';
+  document.getElementById('fib-cat-tag').textContent=c.emoji+' '+c.label;
+  document.getElementById('fib-cat-tag').style.cssText=`background:${c.bg};color:${c.color}`;
+  const sentence=(w.example||`She said it was a "${w.word}" moment.`).replace(new RegExp(w.word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi'),'______');
+  document.getElementById('fib-sentence').textContent=sentence;
+  document.getElementById('fib-hint').textContent='💡 '+w.zh;
+  const wrong=shuffle(wordBank.filter(x=>x.id!==w.id)).slice(0,3);
+  const opts=shuffle([w,...wrong]);
+  document.getElementById('fib-opts').innerHTML=opts.map(o=>`<button class="fib-opt" data-id="${o.id}" onclick="selectFib(this,${w.id})">${o.word}</button>`).join('');
+  document.getElementById('fib-prog').textContent=`${fibIdx+1} / ${fibQueue.length}`;
+  document.getElementById('fib-bar').style.width=`${((fibIdx+1)/fibQueue.length)*100}%`;
+}
+function selectFib(btn,correctId){if(fibChecked)return;document.querySelectorAll('.fib-opt').forEach(b=>b.classList.remove('sel'));btn.classList.add('sel');fibSelected=parseInt(btn.dataset.id);document.getElementById('check-btn').className='check-btn ready';}
+function checkFib(){
+  if(fibSelected===null)return;fibChecked=true;
+  const w=fibQueue[fibIdx];const correct=fibSelected===w.id;
+  document.querySelectorAll('.fib-opt').forEach(b=>{if(parseInt(b.dataset.id)===w.id)b.classList.add('cor');else if(parseInt(b.dataset.id)===fibSelected)b.classList.add('wro');});
+  const fb=document.getElementById('fib-fb');fb.textContent=correct?`✅ 正确！${w.word} = ${w.zh}`:`❌ 正确答案是：${w.word}（${w.zh}）`;fb.className='feedback '+(correct?'cor':'wro');
+  document.getElementById('check-btn').style.display='none';document.getElementById('next-btn').style.display='block';
+}
+function nextFib(){fibIdx++;loadFib();}
+function shuffle(a){return a.sort(()=>Math.random()-.5);}
 </script>
 </body>
 </html>
