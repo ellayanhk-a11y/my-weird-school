@@ -232,6 +232,8 @@ if(shareId){
     .catch(e=>console.error(e));
 }
 
+let libFilter='all';
+
 document.querySelectorAll('.nav-btn').forEach(btn=>{btn.onclick=()=>switchView(btn.dataset.v);});
 function switchView(v){
   document.querySelectorAll('.view').forEach(el=>el.classList.remove('active'));
@@ -302,7 +304,6 @@ function copyUrl(){
 
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200);}
 
-let libFilter='all';
 function renderLibrary(){
   document.getElementById('lib-count').textContent=wordBank.length+' 个词';
   document.getElementById('stats-row').innerHTML=Object.entries(catCfg).map(([k,c])=>`<div class="stat-chip">${c.emoji} ${c.label} <strong>${wordBank.filter(w=>w.category===k).length}</strong></div>`).join('');
