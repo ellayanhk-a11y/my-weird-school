@@ -220,18 +220,16 @@ const chipState={idiom:true,proper:true,highfreq:true,culture:true};
 // 检查是否是分享链接
 const urlParams=new URLSearchParams(window.location.search);
 const shareId=urlParams.get('id');
-if(shareId) loadShared(shareId);
-
-async function loadShared(id){
-  try{
-    const r=await fetch('/api/load?id='+id);
-    const data=await r.json();
-    if(data.words){
-      wordBank=data.words;
-      updateBadge();
-      switchView('library');
-    }
-  }catch(e){console.error(e);}
+if(shareId){
+  switchView('library');
+  document.getElementById('words-grid').innerHTML='<div class="empty"><div class="big">⏳</div><p>正在加载词汇...</p></div>';
+  fetch('/api/load?id='+shareId)
+    .then(r=>r.json())
+    .then(data=>{
+      if(data.words){wordBank=data.words;updateBadge();renderLibrary();}
+      else{document.getElementById('words-grid').innerHTML='<div class="empty"><div class="big">😢</div><p>链接已失效</p></div>';}
+    })
+    .catch(e=>console.error(e));
 }
 
 document.querySelectorAll('.nav-btn').forEach(btn=>{btn.onclick=()=>switchView(btn.dataset.v);});
