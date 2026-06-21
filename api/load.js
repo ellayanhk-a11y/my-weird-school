@@ -12,19 +12,13 @@ export default async function handler(req, res) {
       headers: { Authorization: `Bearer ${token}` }
     });
     const json = await r.json();
-    console.log('load raw:', JSON.stringify(json));
-    
-    if (!json.result) {
-      return res.status(404).json({ error: 'Not found', debug: json });
-    }
+    if (!json.result) return res.status(404).json({ error: 'Not found' });
 
-    let data;
-    try {
-      data = JSON.parse(json.result);
-    } catch(e) {
-      data = json.result;
-    }
-    
+    // 双重解析处理双重序列化问题
+    let data = json.result;
+    if (typeof data === 'string') data = JSON.parse(data);
+    if (typeof data === 'string') data = JSON.parse(data);
+
     return res.status(200).json(data);
   } catch(e) {
     return res.status(500).json({ error: e.message });
